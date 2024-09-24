@@ -1,0 +1,14 @@
+
+nano hm1.txt
+echo "" >> hm1.txt
+echo "Количество методов" >> hm1.txt
+awk '{print $6}' access.log | sort | uniq -c | sort -nr | head -n 2 >> hm1.txt
+echo "" >> hm1.txt
+echo "Кол-во операционных систем с которых выполняются запросы" >> hm1.txt
+awk -F'"' '{print $6}' access.log | awk '{print tolower($0)}' | grep -Eo '(windows|macintosh|linux|ubuntu|android|ios|debian)' | sort | uniq -c | sort -nr >> hm1.txt
+echo "" >> hm1.txt
+echo "Самый популярное устройство" >> hm1.txt
+awk -F'"' '{print $6}' access.log | awk -F'[ ;]' '{for(i=1;i<=NF;i++) if($i ~ /(Windows|Linux|Mac|Android|iPhone)/) print $i}' | sort | uniq -c | sort -nr | head -n 1 >> hm1.txt
+echo "" >> hm1.txt
+echo "Топ 5 популярных браузеров" >> hm1.txt
+awk -F'"' '{print $6}' access.log | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 5 >> hm1.txt
