@@ -37,9 +37,11 @@
    **Возвращает:** Список загруженных образов с их идентификаторами, размерами и временем создания. 
    **Пример возравта:**
     slava@Debian:~$ docker images  
-    REPOSITORY - TAG - IMAGE ID - CREATED - SIZE  
-    cp-zooker - latest - 26a87e... - 6 days ago - 1.08GB  
-    ubuntu - latest - b1d9d... - 4 weeks ago - 78.1MB  
+    | REPOSITORY  | TAG     | IMAGE ID   | CREATED      | SIZE    |
+|-------------|---------|------------|--------------|---------|
+| cp-zooker   | latest  | 26a87e...  | 6 days ago   | 1.08GB  |
+| ubuntu      | latest  | b1d9d...   | 4 weeks ago  | 78.1MB  |
+ 
 
 ---
 
