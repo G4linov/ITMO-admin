@@ -8,11 +8,13 @@
    **Возвращает:** Список доступных образов в Docker Hub, включая их название, описание, количество звезд (рейтинг) и поддержку официальных образов.
    **Пример возравта:**
     slava@Debian:~$ docker search ubuntu  
-    Name - DESCRIPTION - STARS  
-    ubuntu - Ubuntu is a Debian-based linux operating sys... - 17413  
-    ubuntu/squid -Squid is a caching proxy for the web... - 102  
-    ubuntu/nginx - Nginx, a high-performance reverse proxy... - 123  
-    ubuntu/cortex - Cortex provides storage for Prometheus... - 4  
+    | Name           | DESCRIPTION                                      | STARS |
+    |----------------|--------------------------------------------------|-------|
+    | ubuntu         | Ubuntu is a Debian-based linux operating sys...  | 17413 |
+    | ubuntu/squid   | Squid is a caching proxy for the web...           | 102   |
+    | ubuntu/nginx   | Nginx, a high-performance reverse proxy...        | 123   |
+    | ubuntu/cortex  | Cortex provides storage for Prometheus...         | 4     |
+
 
 2. Загрузка образа:
    ```bash
