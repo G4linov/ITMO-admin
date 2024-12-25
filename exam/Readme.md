@@ -18,7 +18,7 @@ docker run cmd ls
 
 При простом запуске мы можем просто добавить аргумент к entrypoint, переопределить его не получится
 ```bash
-docker build -t entrypoint -f Dockerfile.cmd
+docker build -t entrypoint -f Dockerfile.entry
 docker run entrypoint Hello
 Hello
 ```
@@ -27,7 +27,7 @@ Hello
 
 При простом запуске мы можем просто добавить аргумент к entrypoint, переопределить его не получится
 ```bash
-docker build -t cmd_entrypoint -f Dockerfile.cmd
+docker build -t cmd_entrypoint -f Dockerfile.md_enrty
 docker run cmd_entrypoint
 Hello from ENTRYPOINT and CMD!
 ```
@@ -35,7 +35,7 @@ Hello from ENTRYPOINT and CMD!
 Но если мы добавим новый текст, то мы сможем переопределить CMD часть и убрать аргумент по умолчанию к ENTRYPOINT
 
 ```bash
-docker build -t cmd_entrypoint -f Dockerfile.cmd
+docker build -t cmd_entrypoint -f Dockerfile.md_enrty
 docker run cmd_entrypoint Dimas
 Dimas
 ```  
