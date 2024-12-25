@@ -25,9 +25,9 @@ Hello
 
 3. Dockerfile.cmd_enrty
 
-При простом запуске мы можем просто добавить аргумент к entrypoint, переопределить его не получится
+При простом запуске выполнится так ENTRYPOINT команда Echo и аргумент по умолчанию это то, что записано под CMD
 ```bash
-docker build -t cmd_entrypoint -f Dockerfile.md_enrty
+docker build -t cmd_entrypoint -f Dockerfile.md_entry
 docker run cmd_entrypoint
 Hello from ENTRYPOINT and CMD!
 ```
@@ -35,7 +35,7 @@ Hello from ENTRYPOINT and CMD!
 Но если мы добавим новый текст, то мы сможем переопределить CMD часть и убрать аргумент по умолчанию к ENTRYPOINT
 
 ```bash
-docker build -t cmd_entrypoint -f Dockerfile.md_enrty
+docker build -t cmd_entrypoint -f Dockerfile.md_entry
 docker run cmd_entrypoint Dimas
 Dimas
 ```  
