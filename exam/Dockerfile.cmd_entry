@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y curl
+
+ENTRYPOINT ["echo"]
+
+CMD ["Hello from ENTRYPOINT and CMD!"]
